@@ -2,14 +2,15 @@
     <h1>
         xyplot 📈
     </h1>
-   	<p>
-        Plotting with python made easy
+    <img width="400" src="sample.png" alt="Graph made with xyplot" />
+    <p>
+        <i>Plotting with python made easy</i>
     </p>
 </div>
 
 
 
-![Meme representing lines of code required to make a matplotlib graph](https://i.redd.it/zhscjhjr3nb21.jpg)
+[![Say Thanks](https://img.shields.io/badge/Say-Thanks-blue.svg)](https://saythanks.io/to/xypnox)
 
 Are you tired of replicating common steps that are needed to plot even a simple polynomial functions in python's infamous Matplotlib?
 
@@ -34,8 +35,14 @@ curve.save('MyPlot.png')
 Makes sense right?
 
 > **Fair Warning**
+>
 > This is just a high level sensible wrapper to the matplotlib and numpy package. Its aim is to reduce the workload necessary to make very basic plots.
+>
 > To make more extensive and customizable plots, refer to [matplotlib](https://matplotlib.org/)
+
+<div align='center' >
+	<img width='300' src="https://i.redd.it/zhscjhjr3nb21.jpg" alt="Meme depicting my struggle" /> 
+</div>
 
 ## Why this effort?
 
@@ -43,10 +50,9 @@ Some of the more inquistive and experienced would be asking why the hell did I c
 
 For those who still like control, you always have the fig, ax attributes of the curve class available for exploitation! And then, if you are not satisfied, try the OG matplotlib!
 
-
-
 ## Documentation?
 
 > Documentation is like sex: when it is good, it is very, very good;                            and when it is bad, it is better than nothing. — *Dick B.*
 
-With that said, the documentation can be found here: 
+With that said, the documentation can be found here: http://www.xypnox.com/xyplot/xyplot/index.html
+
