@@ -9,5 +9,5 @@ docs: README.md xyplot/*
 	rm -rf docs
 	pdoc3 --html xyplot --output-dir docs
 
-publish: build
+publish: build docs
 	twine upload dist/* --verbose
