@@ -6,6 +6,7 @@ build: /* setup.py
 	python3 setup.py sdist bdist_wheel
 
 docs: README.md xyplot/*
+	rm -rf docs
 	pdoc3 --html xyplot --output-dir docs
 
 publish: build
