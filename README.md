@@ -8,8 +8,6 @@
     </p>
 </div>
 
-
-
 [![Say Thanks](https://img.shields.io/badge/Say-Thanks-blue.svg)](https://saythanks.io/to/xypnox) ![PyPI](https://img.shields.io/pypi/v/xyplot) ![PyPI - License](https://img.shields.io/pypi/l/xyplot) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/xyplot) ![GitHub stars](https://img.shields.io/github/stars/xypnox/xyplot?style=social)
 
 Are you tired of replicating common steps that are needed to plot even a simple polynomial functions in python's infamous Matplotlib?
@@ -41,7 +39,7 @@ Makes sense right?
 > To make more extensive and customizable plots, refer to [matplotlib](https://matplotlib.org/)
 
 <div align='center' >
-	<img width='300' src="https://i.redd.it/zhscjhjr3nb21.jpg" alt="Meme depicting my struggle" /> 
+	<img width='300' src="https://i.redd.it/zhscjhjr3nb21.jpg" alt="Meme depicting my struggle" />
 </div>
 
 ## Why this effort?
@@ -55,13 +53,13 @@ For those who still like control, you always have the fig, ax attributes of the 
 To install the program run
 
 ```
-$ pip install todx
+$ pip install xyplot
 ```
 
 If you are using Ubuntu run this instead:
 
 ```
-$ pip3 install todx
+$ pip3 install xyplot
 ```
 
 To check whether the installation was successful, try importing it:
@@ -72,7 +70,7 @@ from xyplot import Curve
 
 If the import worked, the package is most probably installed.
 
-Note that you may want to install some other python libraries to fully enjoy the *Scientific Python* experience. 
+Note that you may want to install some other python libraries to fully enjoy the _Scientific Python_ experience.
 
 These are recommended:
 
@@ -82,11 +80,10 @@ $ pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 
 ## Documentation?
 
-> Documentation is like sex: when it is good, it is very, very good;                            and when it is bad, it is better than nothing. — *Dick B.*
+> Documentation is like sex: when it is good, it is very, very good; and when it is bad, it is better than nothing. — _Dick B._
 
 With that said, the documentation can be found here: http://www.xypnox.com/xyplot/xyplot/index.html
 
 ## Contributions?
 
 Are welcome!
-
