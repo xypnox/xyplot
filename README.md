@@ -17,17 +17,28 @@ Worry no more! Presenting **xyplot**! Plot polynomials easily and, more importan
 For example, to plot a polynomial best fit curve you only need to:
 
 ```python
-import Curve from xyplot
-x, y  = [x1, x2, ...], [y1, y2, ...]
+from xyplot import Curve
 
+# Our data
+x, y = [0, 2, 4, 6, 8], [0.8, -1.1, 1.06, 6.75, 16.54]
+
+# A simple curve object with data and degree of polynomial
 curve = Curve(x, y, 2)
 
-curve.setLabels(
-  xlabel='time (s)', ylabel='voltage (mV)',
-  title='About as simple as it gets, folks'
+# Set the x, y axis labels and Title
+curve.set(
+    xlabel = "Labels are fun and easy",
+    ylabel = "Oooh see him Go!",
+    title = "I am an easy Graph"
 )
 
-curve.save('MyPlot.png')
+# Label our data and curve
+curve.createPlot(
+    plotLabel="Label for the Curve",
+    dataLabel="Label for our DATA",
+)
+
+curve.save("sample.png") # Save our graph in high quality
 ```
 
 Makes sense right?
