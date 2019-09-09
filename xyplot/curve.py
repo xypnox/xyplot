@@ -60,7 +60,7 @@ class Curve:
         self.data = x, y
         self.curve = cf.getCurve(x, y, polyDeg, depth, extend)
         self.polyDeg = polyDeg
-        self.colors = colors
+        self.settings = {'colors': colors, 'depth': depth, 'extend': extend}
         self.fig, self.ax = plt.subplots()
 
     def createPlot(
@@ -68,6 +68,8 @@ class Curve:
         plotData=True,
         plotLabel='',
         dataLabel='',
+        data=(),
+        colors=[],
         legend=False,
         grid=True,
         path='',
@@ -88,12 +90,23 @@ class Curve:
             path: string, path of file to be saved
             dpi: Number, used as dpi for saving the figure
         """
-        self.ax.plot(self.curve[0], self.curve[1],
-                     color=self.colors[len(self.colors)-1], label=plotLabel)
+
+        if data:
+            curve = cf.getCurve(
+                data[0], data[1], data[2], self.settings['depth'], self.settings['extend'])
+        else:
+            data = self.data
+            curve = self.curve
+
+        if not colors:
+            colors = self.settings['colors']
+
+        self.ax.plot(curve[0], curve[1],
+                     color=colors[len(colors)-1], label=plotLabel)
 
         if plotData:
-            self.ax.scatter(self.data[0], self.data[1],
-                            color=self.colors[0],
+            self.ax.scatter(data[0], data[1],
+                            color=colors[0],
                             label=dataLabel)
 
         self.ax.grid()

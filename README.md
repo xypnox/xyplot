@@ -41,7 +41,7 @@ curve.createPlot(
 curve.save("sample.png") # Save our graph in high quality
 ```
 
-Makes sense right?
+Makes sense right? See `examples` for other examples.
 
 > **Fair Warning**
 >
