@@ -84,7 +84,7 @@ class Curve:
         self.data = x, y
         self.curve = cf.getCurve(x, y, polyDeg, depth, extend)
         self.polyDeg = polyDeg
-        self.colors = colors
+        self.settings = {&#39;colors&#39;: colors, &#39;depth&#39;: depth, &#39;extend&#39;: extend}
         self.fig, self.ax = plt.subplots()
 
     def createPlot(
@@ -92,6 +92,8 @@ class Curve:
         plotData=True,
         plotLabel=&#39;&#39;,
         dataLabel=&#39;&#39;,
+        data=(),
+        colors=[],
         legend=False,
         grid=True,
         path=&#39;&#39;,
@@ -112,12 +114,23 @@ class Curve:
             path: string, path of file to be saved
             dpi: Number, used as dpi for saving the figure
         &#34;&#34;&#34;
-        self.ax.plot(self.curve[0], self.curve[1],
-                     color=self.colors[len(self.colors)-1], label=plotLabel)
+
+        if data:
+            curve = cf.getCurve(
+                data[0], data[1], data[2], self.settings[&#39;depth&#39;], self.settings[&#39;extend&#39;])
+        else:
+            data = self.data
+            curve = self.curve
+
+        if not colors:
+            colors = self.settings[&#39;colors&#39;]
+
+        self.ax.plot(curve[0], curve[1],
+                     color=colors[len(colors)-1], label=plotLabel)
 
         if plotData:
-            self.ax.scatter(self.data[0], self.data[1],
-                            color=self.colors[0],
+            self.ax.scatter(data[0], data[1],
+                            color=colors[0],
                             label=dataLabel)
 
         self.ax.grid()
@@ -275,7 +288,7 @@ First value is used for Data, the last for Plot.</dd>
         self.data = x, y
         self.curve = cf.getCurve(x, y, polyDeg, depth, extend)
         self.polyDeg = polyDeg
-        self.colors = colors
+        self.settings = {&#39;colors&#39;: colors, &#39;depth&#39;: depth, &#39;extend&#39;: extend}
         self.fig, self.ax = plt.subplots()
 
     def createPlot(
@@ -283,6 +296,8 @@ First value is used for Data, the last for Plot.</dd>
         plotData=True,
         plotLabel=&#39;&#39;,
         dataLabel=&#39;&#39;,
+        data=(),
+        colors=[],
         legend=False,
         grid=True,
         path=&#39;&#39;,
@@ -303,12 +318,23 @@ First value is used for Data, the last for Plot.</dd>
             path: string, path of file to be saved
             dpi: Number, used as dpi for saving the figure
         &#34;&#34;&#34;
-        self.ax.plot(self.curve[0], self.curve[1],
-                     color=self.colors[len(self.colors)-1], label=plotLabel)
+
+        if data:
+            curve = cf.getCurve(
+                data[0], data[1], data[2], self.settings[&#39;depth&#39;], self.settings[&#39;extend&#39;])
+        else:
+            data = self.data
+            curve = self.curve
+
+        if not colors:
+            colors = self.settings[&#39;colors&#39;]
+
+        self.ax.plot(curve[0], curve[1],
+                     color=colors[len(colors)-1], label=plotLabel)
 
         if plotData:
-            self.ax.scatter(self.data[0], self.data[1],
-                            color=self.colors[0],
+            self.ax.scatter(data[0], data[1],
+                            color=colors[0],
                             label=dataLabel)
 
         self.ax.grid()
@@ -350,7 +376,7 @@ First value is used for Data, the last for Plot.</dd>
 <h3>Methods</h3>
 <dl>
 <dt id="xyplot.curve.Curve.createPlot"><code class="name flex">
-<span>def <span class="ident">createPlot</span></span>(<span>self, plotData=True, plotLabel='', dataLabel='', legend=False, grid=True, path='', dpi=300)</span>
+<span>def <span class="ident">createPlot</span></span>(<span>self, plotData=True, plotLabel='', dataLabel='', data=(), colors=[], legend=False, grid=True, path='', dpi=300)</span>
 </code></dt>
 <dd>
 <section class="desc"><p>Create the plot</p>
@@ -381,6 +407,8 @@ if plotLabel or dataLabel are set, they override this.</dd>
     plotData=True,
     plotLabel=&#39;&#39;,
     dataLabel=&#39;&#39;,
+    data=(),
+    colors=[],
     legend=False,
     grid=True,
     path=&#39;&#39;,
@@ -401,12 +429,23 @@ if plotLabel or dataLabel are set, they override this.</dd>
         path: string, path of file to be saved
         dpi: Number, used as dpi for saving the figure
     &#34;&#34;&#34;
-    self.ax.plot(self.curve[0], self.curve[1],
-                 color=self.colors[len(self.colors)-1], label=plotLabel)
+
+    if data:
+        curve = cf.getCurve(
+            data[0], data[1], data[2], self.settings[&#39;depth&#39;], self.settings[&#39;extend&#39;])
+    else:
+        data = self.data
+        curve = self.curve
+
+    if not colors:
+        colors = self.settings[&#39;colors&#39;]
+
+    self.ax.plot(curve[0], curve[1],
+                 color=colors[len(colors)-1], label=plotLabel)
 
     if plotData:
-        self.ax.scatter(self.data[0], self.data[1],
-                        color=self.colors[0],
+        self.ax.scatter(data[0], data[1],
+                        color=colors[0],
                         label=dataLabel)
 
     self.ax.grid()

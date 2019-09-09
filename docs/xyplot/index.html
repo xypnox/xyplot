@@ -39,19 +39,30 @@ xyplot 📈
 <p>Are you tired of replicating common steps that are needed to plot even a simple polynomial functions in python's infamous Matplotlib?</p>
 <p>Worry no more! Presenting <strong>xyplot</strong>! Plot polynomials easily and, more importantly, pythonically!</p>
 <p>For example, to plot a polynomial best fit curve you only need to:</p>
-<pre><code class="python">import Curve from xyplot
-x, y  = [x1, x2, ...], [y1, y2, ...]
+<pre><code class="python">from xyplot import Curve
 
+# Our data
+x, y = [0, 2, 4, 6, 8], [0.8, -1.1, 1.06, 6.75, 16.54]
+
+# A simple curve object with data and degree of polynomial
 curve = Curve(x, y, 2)
 
-curve.setLabels(
-  xlabel='time (s)', ylabel='voltage (mV)',
-  title='About as simple as it gets, folks'
+# Set the x, y axis labels and Title
+curve.set(
+    xlabel = &quot;Labels are fun and easy&quot;,
+    ylabel = &quot;Oooh see him Go!&quot;,
+    title = &quot;I am an easy Graph&quot;
 )
 
-curve.save('MyPlot.png')
+# Label our data and curve
+curve.createPlot(
+    plotLabel=&quot;Label for the Curve&quot;,
+    dataLabel=&quot;Label for our DATA&quot;,
+)
+
+curve.save(&quot;sample.png&quot;) # Save our graph in high quality
 </code></pre>
-<p>Makes sense right?</p>
+<p>Makes sense right? See <code>examples</code> for other examples.</p>
 <blockquote>
 <p><strong>Fair Warning</strong></p>
 <p>This is just a high level sensible wrapper to the matplotlib and numpy package. Its aim is to reduce the workload necessary to make very basic plots.</p>

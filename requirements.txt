@@ -69,4 +69,4 @@ wcwidth==0.1.7
 webencodings==0.5.1
 widgetsnbextension==3.5.1
 wrapt==1.11.2
--e git+https://github.com/xypnox/xyplot.git@529770bd3d2910a9087b328159389ee5ef4c1283#egg=xyplot
+-e git+https://github.com/xypnox/xyplot.git@e33b8fff994196a8d2f870295443c806b562cd16#egg=xyplot
