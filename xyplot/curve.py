@@ -2,7 +2,6 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 from . import curveFunc as cf
-from . import colors
 
 
 class Curve:
@@ -36,7 +35,7 @@ class Curve:
         polyDeg=1,
         depth=1000,
         extend=1,
-        colors=colors
+        colors=['#FFB412', '#D97E0F', '#B34692', '#72348C', '#20024D']
     ):
         """Initialize the data and metadata for Plotting
 

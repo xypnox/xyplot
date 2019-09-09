@@ -4,7 +4,6 @@
 """
 from . import curveFunc
 from . import curve
-from . import colors
 
 Curve = curve.Curve
 name = 'xyplot'
