@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="xyplot",
-    version="0.1.3",
+    version="0.1.4",
     author="xypnox",
     author_email="xypnox@gmail.com",
     description="Plotting with python made easy",
