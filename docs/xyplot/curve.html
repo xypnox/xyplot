@@ -26,7 +26,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from . import curveFunc as cf
-from . import colors
 
 
 class Curve:
@@ -60,7 +59,7 @@ class Curve:
         polyDeg=1,
         depth=1000,
         extend=1,
-        colors=colors
+        colors=[&#39;#FFB412&#39;, &#39;#D97E0F&#39;, &#39;#B34692&#39;, &#39;#72348C&#39;, &#39;#20024D&#39;]
     ):
         &#34;&#34;&#34;Initialize the data and metadata for Plotting
 
@@ -169,7 +168,7 @@ class Curve:
 <dl>
 <dt id="xyplot.curve.Curve"><code class="flex name class">
 <span>class <span class="ident">Curve</span></span>
-<span>(</span><span>x, y, polyDeg=1, depth=1000, extend=1, colors=<module 'xyplot.colors' from '/home/xypnox/Projects/self/xyplot/xyplot/colors.py'>)</span>
+<span>(</span><span>x, y, polyDeg=1, depth=1000, extend=1, colors=['#FFB412', '#D97E0F', '#B34692', '#72348C', '#20024D'])</span>
 </code></dt>
 <dd>
 <section class="desc"><p>Creates beautiful plots from data points</p>
@@ -251,7 +250,7 @@ First value is used for Data, the last for Plot.</dd>
         polyDeg=1,
         depth=1000,
         extend=1,
-        colors=colors
+        colors=[&#39;#FFB412&#39;, &#39;#D97E0F&#39;, &#39;#B34692&#39;, &#39;#72348C&#39;, &#39;#20024D&#39;]
     ):
         &#34;&#34;&#34;Initialize the data and metadata for Plotting
 
