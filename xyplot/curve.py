@@ -132,6 +132,18 @@ class Curve:
         """
         self.ax.set(*args, **kwargs)
 
+    def get_linear(self, *args, **kwargs):
+        data = self.data
+
+        if data:
+            a,b = cf.estimate_coef(data[0], data[1])
+            r = []
+            for i in range(len(data[1])):
+                r.append(data[0][i]*a + b)
+
+            self.ax.plot(data[0], r)
+
+
     def save(self, path, dpi=300):
         """Save the plot
 

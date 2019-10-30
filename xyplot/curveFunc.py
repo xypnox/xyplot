@@ -26,3 +26,26 @@ def getCurve(x, y, polyDeg=1, depth=1000, extend=1):
     const = np.polyfit(x, y, polyDeg)
     x_o = getNumArrange(x, depth, extend)
     return x_o, np.array([evalCurve(a, const, polyDeg) for a in x_o]), const
+
+"""
+Estimate coef will be the function to estimate the coefficients to create a linear regression in the module
+"""
+def estimate_coef(x,y):
+    # number of observations/points 
+    x = np.array(x)
+    y = np.array(y)
+
+    n = np.size(x) 
+  
+    # mean of x and y vector 
+    m_x, m_y = np.mean(x), np.mean(y) 
+  
+    # calculating cross-deviation and deviation about x 
+    SS_xy = np.sum(y*x) - n*m_y*m_x 
+    SS_xx = np.sum(x*x) - n*m_x*m_x 
+  
+    # calculating regression coefficients 
+    alpha = SS_xy / SS_xx 
+    beta = m_y - alpha*m_x 
+  
+    return(alpha, beta) 
